@@ -17,7 +17,7 @@ public class Ejercicio9 {
         int b = Teclado.readInt();
         System.out.println("Introduzca el lado 3");
         int c = Teclado.readInt();
-        double area = 1/4*(Math.sqrt((Math.pow(a,2)+Math.pow(b,2)+Math.pow(c,2))-2*(Math.pow(a,4)+Math.pow(b,4)+Math.pow(c,4))));
+        double area = 1/4*(Math.sqrt((Math.pow(a,2)+Math.pow(b,2)+Math.pow(c,2))-2*(Math.pow(a,4)+Math.pow(b,4)+Math.pow(c,4)))); //n
         System.out.println("El resultado del area es " + area);
     }
 }

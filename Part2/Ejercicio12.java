@@ -11,6 +11,7 @@ import utilidades.Teclado;
 public class Ejercicio12 {
     public static void main(String[] args) {
         System.out.println("Introduzca un numero de 5 cifras");
+        // HACERLO CON UN WHILE NUMERO > 10
         int numero = Teclado.readInt();
         if (numero > 9999 && numero < 99999) { //no había implementación más tosca que esta, qué va 
             int quinto = numero%10;

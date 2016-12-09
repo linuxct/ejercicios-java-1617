@@ -10,18 +10,32 @@ import utilidades.Teclado;
 
 public class Ejercicio1 {
     public static void main(String[] args) {
+        boolean repite;
+        do { 
+        repite=false;
         System.out.println("Introduzca la cantidad de números a introducir"); //todo implementar detección de números introducidos automáticamente (cuando el usuario no inserte nada, hacer break)
         int numeros = Teclado.readInt();
-        int []a = new int [numeros];
-        for (int i=0;i<numeros;i++){
-            System.out.println("Introduzca el número");
-            a[i]=Teclado.readInt();
+        if (numeros>=2147483646){
+            System.out.println("Error");
+            repite=true;
         }
-        double sumatorio=0;
-        for (int i=0;i<numeros;i++){
-            sumatorio += a[i];
+            if (repite==false){
+            int []a = new int [numeros];
+            for (int i=0;i<numeros;i++){
+                System.out.println("Introduzca la nota");
+                a[i]=Teclado.readInt();
+                if (a[i]<0 || a[i]>9){
+                    System.out.println("Error");
+                    i--;
+                }
+            }
+            double sumatorio=0;
+            for (int i=0;i<numeros;i++){
+                sumatorio += a[i];
+            }
+            double resultado = sumatorio/numeros;
+            System.out.println("La media da " + resultado);
         }
-        double resultado = sumatorio/numeros;
-        System.out.println("La media da " + resultado);
+        } while (repite);
     }
 }

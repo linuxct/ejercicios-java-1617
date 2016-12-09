@@ -14,7 +14,7 @@ public class Ejercicio11 {
         String frase = Teclado.readString();
         System.out.println("Introduzca el carácter que desea contar");
         char caracter = Teclado.readChar();
-        char[] a = frase.toCharArray(); //y esto no es de StackOverfl0w, eh ;) #CosechaPropia
+        char[] a = frase.toCharArray(); //y esto no es de StackOverfl0w #CosechaPropia
         int contador=0;
         for (int i=0;i<frase.length();i++){
             if (a[i]==caracter){
