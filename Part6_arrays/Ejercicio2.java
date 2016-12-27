@@ -11,9 +11,17 @@ import utilidades.Teclado;
 public class Ejercicio2 {
     public static void main(String[] args) {
         int []a = new int [10];
+        boolean retry=false;
         for (int i=0;i<10;i++){
-            System.out.println("Introduzca el número");
+            if (retry){
+                i--;
+                retry=false;
+            }
+            System.out.println("Introduzca el número para el índice " +i);
             a[i]=Teclado.readInt(); //índices del 0 al 9
+            if (a[i]==2147483647){ //es el valor devuelto al haber una excepcion en la clase Teclado.readInt()
+                retry=true; //reducirá el contador en la siguiente iteración
+            }
         }
         double sumatorio=0;
         for (int i=0;i<10;i++){

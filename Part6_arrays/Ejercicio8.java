@@ -24,7 +24,7 @@ public class Ejercicio8 {
                 a[i][j]=Teclado.readInt(); //ahora está en 1,2
             }
         }
-        //System.out.println(Arrays.deepToString(a)); usar sólo para comprobar el contenido del array
+        //System.out.println(Arrays.deepToString(a)); //usar sólo para comprobar el contenido del array
         int sueldo=0,sueldotmp=0;
         String nombredelafortunado=null;
         for (int i=0;i<a.length;i++){ //array de lectura
@@ -33,9 +33,9 @@ public class Ejercicio8 {
                 sueldotmp = (int) a[i][j];
                 if (sueldotmp>sueldo){
                     sueldo = sueldotmp;
-                    j--; //guarradas para sacar el nombre en vez del sueldo
+                    j--; //para sacar el nombre en vez del sueldo
                     nombredelafortunado = (String) a[i][j];
-                    j++; //¿que por qué la dejo como estaba? porque si no se puede volver a cumplir la condición de arriba y quedarse en bucle infinito #DontQuoteMeOnThat
+                    j++; //porque si no se puede volver a cumplir la condición de arriba y ¿quedarse en bucle infinito? #DontQuoteMeOnThat
                 }
             }
         }

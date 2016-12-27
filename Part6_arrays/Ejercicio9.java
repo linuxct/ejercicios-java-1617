@@ -11,8 +11,13 @@ import java.util.Arrays;
 
 public class Ejercicio9 {
     public static void main(String[] args) {
-        System.out.println("Introduzca el tamaño del array");
-        int n = Teclado.readInt();
+        int n;
+        boolean repetir;
+        do {
+            System.out.println("Introduzca el tamaño del array");
+            n = Teclado.readInt();
+            repetir = n==2147483647;
+        } while (repetir);
         double []a = new double [n];
         for (int i=0;i<a.length;i++){
             a[i]=Math.random(); //ya está, ¿no?
